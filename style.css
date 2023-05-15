@@ -60,6 +60,7 @@ body{
     background-color: rgb(238, 235, 235);
     margin: 40px 140px 50px 40px;
     font-family: 'Poppins', sans-serif;
+    color:rgb(139, 72, 72)
 }
 .form-ctrl{
     background-color: white;
@@ -80,7 +81,8 @@ td{
 .inp{
     font-family: Arial, Helvetica, sans-serif;
     font-size:15px;
-    border: 1px solid rgba(0,0,0,0.8);
+    outline: none;    
+    border: 1px solid #DDDDDD;
     border-radius: 10%;
 }
 .form-btn{
@@ -100,4 +102,14 @@ td{
     border: 1px solid rgb(139, 72, 72);
     border-radius: 10px;
     margin-bottom: 20px;;
+}
+.inp:focus{
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+.inp:invalid{
+  box-shadow: 0 0 5px rgb(194, 16, 16);
+  
+  border: 1px solid rgba(194, 16, 16, 1);
 }

@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&display=swap" rel="stylesheet">
-    
+    <script src="match.js" defer></script>
     <title>Sign Up Form</title>
 </head>
 <body>
@@ -48,27 +48,28 @@
                         <tr>
                             <td>
                                 <label class="lblinp">EMAIL</label><br>
-                                <input class="inp" type="text">
+                                <input class="inp" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" >
                             </td>
                             <td>
                                 <label class="lblinp">PHONE NUMBER</label><br>
-                                <input class="inp" type="text">
+                                <input class="inp" type="text" maxlength="10" pattern="[1-9]{1}[0-9]{9}" placeholder="10 digit mobile number">
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <label class="lblinp">PASSWORD</label><br>
-                                <input class="inp" type="text">
+                                <input class="inp" type="password" required minlength="3" maxlength="20" id="pass" >
                             </td>
                             <td>
                                 <label class="lblinp">CONFIRM PASSWORD</label><br>
-                                <input class="inp" type="text">
+                                <input class="inp" type="password" type="text" required minlength="3" maxlength="20" id="confpass">
+                                <span id="wrong_pass_alert"></span>
                             </td>
                         </tr>
                     </table>
                 </div>
                 <div class="form-btn">
-                    <button class="btn">Create Account</button><br><br>
+                    <button class="btn" id="btn">Create Account</button><br><br>
                     Already have an account? Log in.
                 </div>
             </form>
